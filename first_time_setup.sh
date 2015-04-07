@@ -26,4 +26,5 @@ git config --global push.default simple
 printf '\nReturning to original directory...\n'
 cd $cwd
 
-printf '\nDone!\n'
+printf '\nDone! Rebooting now...\n'
+sudo shutdown -r now
