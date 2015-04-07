@@ -15,7 +15,7 @@ cd $path
 
 printf '\nReplaceing ~/.bashrc...\n'
 sudo rm ~/.bashrc
-sudo cp .bashrc ~/.bashrc
+sudo cp $path/.bashrc ~/.bashrc
 
 printf '\nInstalling programs...\n'
 sudo apt-get -y install byobu htop vim git build-essential > /dev/null
