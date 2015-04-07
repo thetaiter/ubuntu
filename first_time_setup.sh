@@ -4,6 +4,12 @@ cwd=${PWD}
 
 path=$( cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P )
 
+printf '\nRemoving unnecessary directories...\n'
+sudo rm -r ~/Music ~/Public ~/Videos ~/examples.desktop ~/Pictures ~/Templates
+
+printf '\nAdding Development directory...\n'
+mkdir -p ~/Development
+
 printf '\nChanging to directory %s...\n' $path
 cd $path
 
