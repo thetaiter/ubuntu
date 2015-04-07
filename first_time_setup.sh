@@ -5,7 +5,7 @@ cwd=${PWD}
 path=$( cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P )
 
 printf '\nRemoving unnecessary directories...\n'
-sudo rm -r ~/Music ~/Public ~/Videos ~/examples.desktop ~/Pictures ~/Templates
+sudo rm -r -f ~/Music ~/Public ~/Videos ~/examples.desktop ~/Pictures ~/Templates ~/Downloads/ubuntu-master*
 
 printf '\nAdding Development directory...\n'
 mkdir -p ~/Development
