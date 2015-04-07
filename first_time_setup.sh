@@ -22,7 +22,7 @@ sudo apt-get -y install byobu htop vim git build-essential > /dev/null
 
 printf '\nRunning Updates and Upgrades...\n'
 sudo apt-get -y update > /dev/null
-sudo apt-get -y upgrade > /dev/null
+sudo apt-get -y dist-upgrade > /dev/null
 
 printf '\nConfiguring git...\n'
 git config --global user.name "Ian Tait"
