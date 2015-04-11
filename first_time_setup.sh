@@ -1,13 +1,10 @@
 #!/bin/sh
 
-cwd=${PWD}
-
 path=$( cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P )
 
-printf '\nReplaceing ~/.bashrc...\n'
+printf '\nAppending to ~/.bashrc...\n'
 cd $path
 cat .bashrc >> ~/.bashrc
-cd $cwd
 
 printf '\nInstalling programs...\n'
 sudo apt-get -y install byobu htop vim git build-essential > /dev/null
@@ -22,7 +19,7 @@ git config --global user.email "thetaiter@gmail.com"
 git config --global push.default simple
 
 printf '\nRemoving unnecessary directories...\n'
-sudo rm -r -f ~/Music ~/Public ~/Videos ~/examples.desktop ~/Pictures ~/Templates ~/Downloads/ubuntu-master*
+sudo rm -r -f ~/Music ~/Public ~/Videos ~/examples.desktop ~/Pictures ~/Templates
 
 printf '\nAdding Development directory...\n'
 mkdir -p ~/Development
