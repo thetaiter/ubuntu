@@ -6,8 +6,7 @@ path=$( cd -P -- "$(dirname -- "$(command -v -- "$0")")" && pwd -P )
 
 printf '\nReplaceing ~/.bashrc...\n'
 cd $path
-sudo rm ~/.bashrc
-sudo cp .bashrc ~/.bashrc
+cat .bashrc >> ~/.bashrc
 cd $cwd
 
 printf '\nInstalling programs...\n'
