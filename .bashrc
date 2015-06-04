@@ -84,3 +84,4 @@ parse_git_branch() {
 
 export PS1="${IWhite}[\d \t] ${ICyan}\u${IWhite}➤ ${IPurple}\h ${IWhite}➔ ${IBlue}\w${IYellow}\$(parse_git_branch) ${IGreen}\n| $ "
 export PS2="  $ "
+export HISTTIMEFORMAT="[%m/%d/%Y %T] "
